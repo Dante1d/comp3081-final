@@ -1,0 +1,20 @@
+<!-- app/views/pages/home.html.erb -->
+<!DOCTYPE html>
+<html>
+<h1>Welcome to the Recipe Finder</h1>
+<h2>Welcome to our Recipe Finder App!</h2>
+<p>Our Recipe Finder is a web application built with Ruby on Rails that allows you to easily find and organize your favorite recipes. Whether you're a seasoned chef or just getting started in the kitchen, our app provides a user-friendly interface for storing, categorizing, and searching through your recipes.</p>
+<p>With our Recipe Finder, you can find new recipes, learn what ingredients they have, and even learn the price of the recipes with friends and family. You can also search for recipes based on name to learn cooking time and its description, making it easy to find the perfect recipe for any occasion.</p>
+<p>Start finding your recipes today with our Recipe Finder app!</p>
+
+<div class="row d-flex justify-content-center">
+  <div class="col text-center">
+    <%= link_to 'Recipes', recipes_path, class: 'btn btn-primary btn-lg btn-recipes' %>
+    <p>View all recipes</p>
+  </div>
+  <div class="col text-center">
+    <%= link_to 'Ingredients', ingredients_path, class: 'btn btn-success btn-lg btn-ingredients' %>
+    <p>View all ingredients</p>
+  </div>
+</div>
+</html>

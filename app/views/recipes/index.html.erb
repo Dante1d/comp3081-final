@@ -1,0 +1,33 @@
+<!-- index.html.erb -->
+<h1>Recipes</h1>
+
+
+<h3>Search by Recipe Name:</h3>
+
+<div id="recipes">
+  <table class="table table-striped" id="recipes-table" data-controller="search">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Cook Time</th>
+        <th scope="col">
+        <input type="text" id="search-input" name="search" placeholder="Enter recipe name..." data-action="input->search#filterRecipes">
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @recipes.each_with_index do |recipe, index| %>
+        <tr>
+          <th scope="row"><%= index + 1 %></th>
+          <td data-search-target="name"><%= recipe.name %></td>
+          <td><%= recipe.description %></td>
+          <td><%= recipe.cook_time %> minutes</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<%= link_to 'Back', root_path %>
+
